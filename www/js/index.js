@@ -40,9 +40,12 @@ var app = {
         var parentElement = document.getElementById(id);
         var listeningElement = parentElement.querySelector('.listening');
         var receivedElement = parentElement.querySelector('.received');
+        var deviceDetails = parentElement.querySelector('.devicedetails');
 
         listeningElement.setAttribute('style', 'display:none;');
         receivedElement.setAttribute('style', 'display:block;');
+        deviceDetails.innerHTML = "name=" + device.name + ",platform=" + device.platform + ",version=" + 
+        device.version + ",model=" + device.model;
 
         console.log('Received Event: ' + id);
     }
